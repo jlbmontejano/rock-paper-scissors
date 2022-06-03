@@ -1,0 +1,24 @@
+.rules-box {
+    background-color: white;
+    padding: 1em;
+    border-radius: 1em;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.rules-box div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+.rules-box div h1 {
+    display: inline-block;
+    color: var(--clr-dark-text)
+}
+
+.image-rules {
+    width: 100%;
+}

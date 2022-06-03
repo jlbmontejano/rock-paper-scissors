@@ -1,0 +1,28 @@
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    width: 90%;
+    max-width: 650px;
+    padding: 1.75em;
+    border: 2px solid var(--clr-header-outline);
+    border-radius: 1em;
+    margin: 3em auto;
+}
+
+.score-box {
+    border: none;
+    background-color: white;
+    width: 25%;
+    border-radius: .25em;
+    padding: .25em;
+    text-align: center;
+}
+
+.score-box h5 {
+    color: var(--clr-dark-text);
+}
+
+.score-box h1 {
+    color: var(--clr-score-text);
+}

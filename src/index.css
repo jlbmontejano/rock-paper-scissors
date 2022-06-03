@@ -8,23 +8,28 @@
   --fw-normal: 600;
   --fw-bold: 700;
 
-  --clr-scissors: linearGradient(#ec9e0e, #eca922);
-  --clr-paper: linearGradient(#4865f4, #5671f5);
-  --clr-rock: linearGradient(#dc2e4e, #dd405d);
-
-  --clr-dark-text: #623b63;
-  --clr-score-text: #be2ac0;
+  --clr-dark-text: #3b4363;
+  --clr-score-text: #2a46c0;
   --clr-header-outline: #606e85;
 
-  --clr-background: linearGradient(#1f3756, #15173d);
+  --clr-background: linear-gradient(#1f3756, #141539);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
+  color: white;
+  line-height: 0;
+  background-color: var(--clr-background);
+  background-image: url('../public/images/bg-triangle.svg'), var(--clr-background);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: normal;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  height: 100vh;
 }

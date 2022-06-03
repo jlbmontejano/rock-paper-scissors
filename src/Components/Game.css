@@ -1,0 +1,33 @@
+.game-ready {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 650px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.game-ready .scissors {
+    grid-column: span 2;
+}
+
+.game-on {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 650px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.game-over {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 650px;
+    height: 500px;
+    margin: 0 auto;
+}

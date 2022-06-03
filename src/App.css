@@ -1,3 +1,36 @@
 .App {
   text-align: center;
 }
+
+.option {
+  width: 135px;
+  height: 135px;
+  background: white;
+  border-radius: 50%;
+  padding: .55em;
+  border: 10px solid;
+}
+
+.rock {
+  border-color: #dc2e4e;
+}
+
+.paper {
+  border-color: #4865f4;
+}
+
+.scissors {
+  border-color: #ec9e0e;
+}
+
+button {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-transform: uppercase;
+  background-color: var(--clr-background);
+  padding: .5em 2em;
+  border: 2px solid var(--clr-header-outline);
+  border-radius: .5em;
+  letter-spacing: .4em;
+}
