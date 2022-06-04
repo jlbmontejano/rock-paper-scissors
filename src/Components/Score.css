@@ -3,7 +3,7 @@
     justify-content: space-between;
     text-align: left;
     width: 90%;
-    max-width: 650px;
+    max-width: 600px;
     padding: 1.75em;
     border: 2px solid var(--clr-header-outline);
     border-radius: 1em;

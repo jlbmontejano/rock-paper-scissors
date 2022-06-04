@@ -1,0 +1,27 @@
+.option {
+    width: 105px;
+    height: 105px;
+    background: white;
+    border-radius: 50%;
+    padding: .55em;
+    border: 10px solid;
+}
+
+.rock {
+    border-color: #dc2e4e;
+}
+
+.paper {
+    border-color: #4865f4;
+}
+
+.scissors {
+    border-color: #ec9e0e;
+}
+
+@media (min-width: 700px) {
+    .option {
+        width: 135px;
+        height: 135px;
+    }
+}

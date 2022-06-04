@@ -1,10 +1,13 @@
 .rules-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     padding: 1em;
     border-radius: 1em;
     width: 90%;
     max-width: 450px;
-    margin: 0 auto;
 }
 
 .rules-box div {

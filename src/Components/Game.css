@@ -1,14 +1,19 @@
-.game-ready {
+.game {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
     align-items: center;
-    width: 650px;
-    height: 500px;
+    width: 100%;
+    max-width: 650px;
+    height: 550px;
     margin: 0 auto;
+    background-image: url('../../public/images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: normal;
+    background-size: 50%;
 }
 
-.game-ready .scissors {
+.game .scissors {
     grid-column: span 2;
 }
 
@@ -17,17 +22,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    width: 650px;
-    height: 500px;
-    margin: 0 auto;
-}
-
-.game-over {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    width: 650px;
-    height: 500px;
+    max-width: 650px;
+    height: 550px;
     margin: 0 auto;
 }

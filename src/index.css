@@ -25,11 +25,7 @@ body {
 body {
   color: white;
   line-height: 0;
-  background-color: var(--clr-background);
-  background-image: url('../public/images/bg-triangle.svg'), var(--clr-background);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: normal;
+  background-color: #1f3756;
   font-family: 'Barlow Semi Condensed', sans-serif;
   height: 100vh;
 }

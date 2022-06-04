@@ -1,40 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Option from "./Option";
 import "./Game.css";
 
-const Game = ({ playerScore }) => {
+const Game = ({ playerScore, setPlayerScore }) => {
   const [appState, setAppState] = useState("GameReady");
   const [playerChoice, setPlayerChoice] = useState();
-  const [computerChoice, setComputerChoice] = useState();
+  const [computerChoice, setComputerChoice] = useState("rock");
   const [gameMessage, setGameMessage] = useState();
   const options = ["rock", "paper", "scissors"];
-  let random = [Math.floor(Math.random() * options.length)];
+  let myInterval = useRef(null);
+  let counter = useRef(0);
 
   //Reset the game after every round
   const initialState = () => {
     setAppState("GameReady");
     setPlayerChoice();
-    setComputerChoice();
+    setComputerChoice("rock");
   };
 
-  useEffect(() => {
-    gameLogic();
-  }, [computerChoice]);
-
   const gameLogic = () => {
+    if (!computerChoice) {
+      return;
+    }
     if (playerChoice === computerChoice) {
       setGameMessage("It's a tie!");
     } else if (playerChoice === "rock" && computerChoice === "scissors") {
-      setGameMessage("You've won!");
-      playerScore++;
+      setGameMessage("You won!");
+      setPlayerScore(playerScore + 1);
     } else if (playerChoice === "scissors" && computerChoice === "paper") {
-      setGameMessage("You've won!");
-      playerScore++;
+      setGameMessage("You won!");
+      setPlayerScore(playerScore + 1);
     } else if (playerChoice === "paper" && computerChoice === "rock") {
-      setGameMessage("You've won!");
-      playerScore++;
+      setGameMessage("You won!");
+      setPlayerScore(playerScore + 1);
     } else {
-      setGameMessage("You've lost!");
-      playerScore--;
+      setGameMessage("You lost!");
+      if (playerScore > 0) {
+        setPlayerScore(playerScore - 1);
+      }
+    }
+  };
+
+  const toggleInterval = () => {
+    if (!myInterval.current) {
+      myInterval.current = setInterval(() => {
+        if (counter.current === options.length) {
+          counter.current = 0;
+        }
+        setComputerChoice(options[counter.current]);
+        counter.current++;
+      }, 100);
+    } else {
+      clearInterval(myInterval.current);
+      myInterval.current = null;
     }
   };
 
@@ -44,17 +62,13 @@ const Game = ({ playerScore }) => {
   switch (appState) {
     case "GameReady":
       return (
-        <div className="game-ready">
+        <div className="game">
           {options.map(option => (
-            <img
-              src={process.env.PUBLIC_URL + `images/${option}.svg`}
-              alt={`${option}`}
-              key={`${option}`}
-              className={`option ${option}`}
-              onClick={() => {
-                setPlayerChoice(`${option}`);
-                setAppState("GameOn");
-              }}
+            <Option
+              option={option}
+              setPlayerChoice={setPlayerChoice}
+              setAppState={setAppState}
+              toggleInterval={toggleInterval}
             />
           ))}
         </div>
@@ -70,20 +84,24 @@ const Game = ({ playerScore }) => {
           <div>
             <button
               onClick={() => {
-                random = [Math.floor(Math.random() * options.length)];
-                setComputerChoice(options[random]);
                 setAppState("GameOver");
+                toggleInterval();
+                gameLogic();
               }}
             >
               Stop
             </button>
           </div>
-          <span className={`option`} />
+          <img
+            src={process.env.PUBLIC_URL + `images/${computerChoice}.svg`}
+            alt={`${computerChoice}`}
+            className={`option ${computerChoice}`}
+          />
         </div>
       );
     case "GameOver":
       return (
-        <div className="game-over">
+        <div className="game-on">
           <img
             src={process.env.PUBLIC_URL + `images/${playerChoice}.svg`}
             alt={`${playerChoice}`}
