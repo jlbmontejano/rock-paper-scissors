@@ -20,7 +20,7 @@ const Game = ({ playerScore, setPlayerScore }) => {
 
   const gameLogic = () => {
     if (!computerChoice) {
-      return;
+      throw new Error();
     }
     if (playerChoice === computerChoice) {
       setGameMessage("It's a tie!");

@@ -24,7 +24,7 @@ const App = () => {
           Rules
         </button>
       </div>
-      {displayRules === true && <Rules setDisplayRules={setDisplayRules} />}
+      {displayRules === true && <Rules />}
     </div>
   );
 };
