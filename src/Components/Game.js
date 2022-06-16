@@ -59,9 +59,6 @@ const Game = ({ playerScore, setPlayerScore }) => {
   let myInterval = useRef(null);
   let counter = useRef(0);
 
-  // useEffect(() => toggleInterval(), [state.playerChoice]);
-  // useEffect(() => toggleInterval(), [state.gameMessage]);
-
   const toggleInterval = () => {
     if (!myInterval.current) {
       myInterval.current = setInterval(() => {

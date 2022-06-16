@@ -28,8 +28,8 @@ button:hover {
 
 .rules-button {
   position: fixed;
-  bottom: 20px;
   display: flex;
   justify-content: center;
+  bottom: 35px;
   width: 100%;
 }
