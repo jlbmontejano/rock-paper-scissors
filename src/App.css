@@ -18,6 +18,18 @@ button {
   border: 2px solid var(--clr-header-outline);
   border-radius: .5em;
   letter-spacing: .4em;
-  width: 220px;
+  width: 140px;
   margin: 0 auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.rules-button {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

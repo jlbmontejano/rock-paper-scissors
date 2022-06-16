@@ -22,6 +22,10 @@
     color: var(--clr-dark-text)
 }
 
+.icon-close:hover {
+    cursor: pointer;
+}
+
 .image-rules {
     width: 100%;
 }

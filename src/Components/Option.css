@@ -7,6 +7,10 @@
     border: 10px solid;
 }
 
+.option:hover {
+    cursor: pointer;
+}
+
 .rock {
     border-color: #dc2e4e;
 }
@@ -19,7 +23,7 @@
     border-color: #ec9e0e;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 560px) {
     .option {
         width: 135px;
         height: 135px;

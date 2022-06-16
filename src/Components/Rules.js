@@ -9,7 +9,8 @@ const Rules = ({ setDisplayRules }) => {
         <img
           src={process.env.PUBLIC_URL + `images/icon-close.svg`}
           alt="close"
-          onClick={setDisplayRules(false)}
+          onClick={() => setDisplayRules(false)}
+          className="icon-close"
         />
       </div>
       <div>
