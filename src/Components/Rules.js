@@ -1,7 +1,7 @@
 import React from "react";
 import "./Rules.css";
 
-const Rules = () => {
+const Rules = ({ setDisplayRules }) => {
   return (
     <div className="rules-box">
       <div>
@@ -9,6 +9,8 @@ const Rules = () => {
         <img
           src={process.env.PUBLIC_URL + `images/icon-close.svg`}
           alt="close"
+          onClick={() => setDisplayRules(false)}
+          className="icon-close"
         />
       </div>
       <div>

@@ -1,21 +1,31 @@
 import React from "react";
 import "./Option.css";
+import { ACTIONS } from "./Game";
 
-const Option = ({ option, setPlayerChoice, setAppState, toggleInterval }) => {
+const Option = ({
+  option,
+  dispatch = () => {},
+  choice = null,
+  toggleInterval = () => {},
+}) => {
   return (
-    <div className={`${option}`}>
+    <button
+      className={`option ${option}`}
+      onClick={() => {
+        toggleInterval();
+        dispatch({
+          type: ACTIONS.APP_STATE.GAME_ON,
+          payload: { ...choice },
+        });
+      }}
+      disabled={!choice}
+    >
       <img
         src={process.env.PUBLIC_URL + `images/${option}.svg`}
         alt={`${option}`}
-        key={`${option}`}
-        className={`option ${option}`}
-        onClick={() => {
-          setPlayerChoice(`${option}`);
-          setAppState("GameOn");
-          toggleInterval();
-        }}
+        className={` ${option}`}
       />
-    </div>
+    </button>
   );
 };
 
