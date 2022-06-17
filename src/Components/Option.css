@@ -5,6 +5,12 @@
     border-radius: 50%;
     padding: .55em;
     border: 10px solid;
+    margin: 0 auto;
+}
+
+.option img {
+    width: 80%;
+    height: 80%;
 }
 
 .option:hover {
@@ -29,3 +35,10 @@
         height: 135px;
     }
 }
+
+@media (min-width: 1200px) {
+    .option {
+        width: 155px;
+        height: 155px;
+    }
+  }

@@ -10,7 +10,7 @@ const Option = ({
 }) => {
   return (
     <button
-      className={`${option}`}
+      className={`option ${option}`}
       onClick={() => {
         toggleInterval();
         dispatch({
@@ -23,7 +23,7 @@ const Option = ({
       <img
         src={process.env.PUBLIC_URL + `images/${option}.svg`}
         alt={`${option}`}
-        className={`option ${option}`}
+        className={` ${option}`}
       />
     </button>
   );

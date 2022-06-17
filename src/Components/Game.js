@@ -1,4 +1,4 @@
-import React, { useRef, useReducer, useEffect } from "react";
+import React, { useRef, useReducer } from "react";
 import Option from "./Option";
 import "./Game.css";
 
@@ -92,7 +92,7 @@ const Game = ({ playerScore, setPlayerScore }) => {
     ) {
       dispatch({
         type: ACTIONS.GAME_MESSAGE,
-        payload: { gameMessage: "You won" },
+        payload: { gameMessage: "You won!" },
       });
       setPlayerScore(playerScore + 1);
     } else if (
@@ -101,7 +101,7 @@ const Game = ({ playerScore, setPlayerScore }) => {
     ) {
       dispatch({
         type: ACTIONS.GAME_MESSAGE,
-        payload: { gameMessage: "You won" },
+        payload: { gameMessage: "You won!" },
       });
       setPlayerScore(playerScore + 1);
     } else if (
@@ -110,13 +110,13 @@ const Game = ({ playerScore, setPlayerScore }) => {
     ) {
       dispatch({
         type: ACTIONS.GAME_MESSAGE,
-        payload: { gameMessage: "You won" },
+        payload: { gameMessage: "You won!" },
       });
       setPlayerScore(playerScore + 1);
     } else {
       dispatch({
         type: ACTIONS.GAME_MESSAGE,
-        payload: { gameMessage: "You lost" },
+        payload: { gameMessage: "You lost!" },
       });
       if (playerScore > 0) {
         setPlayerScore(playerScore - 1);

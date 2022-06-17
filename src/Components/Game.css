@@ -2,15 +2,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    width: 100%;
-    max-width: 650px;
-    height: 450px;
+    width: 90%;
+    max-width: 670px;
+    height: 25em;
     margin: 0 auto;
     background-image: url('../../public/images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: normal;
-    background-size: 50%;
+    background-size: 220px;
 }
 
 .game .scissors {
@@ -19,10 +19,31 @@
 
 .game-on {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
     justify-items: center;
     align-items: center;
-    max-width: 650px;
-    height: 550px;
+    width: 90%;
+    max-width: 450px;
+    height: 25em;
     margin: 0 auto;
+}
+
+@media (min-width: 560px) {
+    .game {
+        height: 32em;
+        background-size: 300px;
+    }
+
+    .game-on {
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .game {
+        height: 34em;
+        background-size: 420px;
+    }
 }
