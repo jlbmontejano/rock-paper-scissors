@@ -2,7 +2,6 @@
 
 - [Overview](#overview)
 - [Technologies](#technologies)
-- [Screenshots](#screenshots)
 - [Author](#author)
 
 ## Overview
@@ -16,17 +15,6 @@ Users should be able to:
 
 - ReactJS
 - CSS
-
-## Screenshots
-
-### Desktop Design
-
-
-### Mobile Design
-
-
-### Active States
-
 
 ## Author
 
