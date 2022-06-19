@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    width: 90%;
+    width: 95%;
     max-width: 670px;
     height: 25em;
     margin: 0 auto;
@@ -23,9 +23,8 @@
     gap: 1em;
     justify-items: center;
     align-items: center;
-    width: 90%;
+    width: 95%;
     max-width: 670px;
-    height: 25em;
     margin: 0 auto;
 }
 

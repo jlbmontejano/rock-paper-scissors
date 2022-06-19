@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.main-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 button {
   color: inherit;
   font-size: inherit;
