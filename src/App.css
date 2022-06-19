@@ -1,18 +1,13 @@
 .App {
+  display: grid;
+  grid-template-rows: 1fr 3fr .5fr;
   text-align: center;
-}
-
-.main-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 }
 
 button {
   color: inherit;
   font-size: inherit;
   font-family: inherit;
-  text-transform: uppercase;
   background-color: var(--clr-background);
   padding: .5em 2em;
   border: 2px solid var(--clr-header-outline);
@@ -22,12 +17,4 @@ button {
 
 button:hover {
   cursor: pointer;
-}
-
-.rules-button {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  bottom: 35px;
-  width: 100%;
 }

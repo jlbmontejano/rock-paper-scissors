@@ -27,6 +27,7 @@ body {
   line-height: 0;
   background-color: #1f3756;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
   height: 100vh;
   font-size: 14px;
 }
