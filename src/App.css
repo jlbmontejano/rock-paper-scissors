@@ -8,7 +8,6 @@ button {
   color: inherit;
   font-size: inherit;
   font-family: inherit;
-  text-transform: uppercase;
   background-color: var(--clr-background);
   padding: .5em 2em;
   border: 2px solid var(--clr-header-outline);
