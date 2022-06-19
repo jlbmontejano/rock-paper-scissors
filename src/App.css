@@ -1,4 +1,6 @@
 .App {
+  display: grid;
+  grid-template-rows: 1fr 3fr .5fr;
   text-align: center;
 }
 
@@ -16,12 +18,4 @@ button {
 
 button:hover {
   cursor: pointer;
-}
-
-.rules-button {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  bottom: 35px;
-  width: 100%;
 }

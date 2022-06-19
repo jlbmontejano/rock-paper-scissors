@@ -37,6 +37,7 @@
     .game-on {
         grid-template-rows: none;
         grid-template-columns: 1fr 1fr 1fr;
+        height: 32em;
     }
 }
 
@@ -44,5 +45,9 @@
     .game {
         height: 34em;
         background-size: 420px;
+    }
+
+    .game-on {
+        height: 34em;
     }
 }
