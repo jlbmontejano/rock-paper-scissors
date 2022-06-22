@@ -10,15 +10,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <div style={displayRules ? { opacity: "70%" } : {}}>
+      {displayRules === true && <Rules setDisplayRules={setDisplayRules} />}
+      <div className="App-body">
         <Score playerScore={playerScore} />
         <Game playerScore={playerScore} setPlayerScore={setPlayerScore} />
         <div className="rules-button">
           <button onClick={() => setDisplayRules(true)}>Rules</button>
         </div>
-      </div>
-      <div>
-        {displayRules === true && <Rules setDisplayRules={setDisplayRules} />}
       </div>
     </div>
   );
