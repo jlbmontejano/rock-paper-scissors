@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       {displayRules === true && <Rules setDisplayRules={setDisplayRules} />}
-      <div className="App-body">
+      <div className="app-body">
         <Score playerScore={playerScore} />
         <Game playerScore={playerScore} setPlayerScore={setPlayerScore} />
         <div className="rules-button">
